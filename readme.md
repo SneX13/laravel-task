@@ -1,4 +1,5 @@
 ### Snezana Jovic
+
 ### Laravel introduction and test
 
 This is a short introduction to Laravel with a few practical task to solve. Not all lessons in
@@ -40,3 +41,4 @@ Step 6
 1. clone this repo
 2. composer install
 3. php artisan serve
+
