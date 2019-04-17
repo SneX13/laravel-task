@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Laravel-task-test</title>
-        
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<head>
+    <title>Laravel-task-test</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/cover.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="site-wrapper">
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+    <div class="site-wrapper-inner">
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+        <div class="cover-container">
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">Laravel introduction and test</h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li class="{{ Route::currentRouteName() == 'home' ? 'active' : '' }}"><a href="/">Home</a></li>
+                            <li class="{{ Route::currentRouteName() == 'task-one' ? 'active' : '' }}"><a href="{{ route('task-one') }}">Task 1</a></li>
+                            <li class="{{ Route::currentRouteName() == 'task-two' ? 'active' : '' }}"><a href="{{ route('task-two') }}">Task 2</a></li>
+                            <li class="{{ request()->is('weather') || request()->is('weather/*') ? 'active' : ''}}"><a href="{{ route('task-three') }}">Task 3</a></li>
+                            <li class="{{ Route::currentRouteName() == 'task-four' ? 'active' : '' }}"><a href="{{ route('task-four') }}">Task 4</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
-            .title {
-                font-size: 96px;
-            }
-            .container form {
-                font-weight: 400;
-            }
-        </style>
-    </head>
-    <body>
-        @yield('content')
-    </body>
+            <div class="inner cover">
+                @yield('content')
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>

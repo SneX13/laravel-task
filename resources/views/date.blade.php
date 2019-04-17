@@ -2,10 +2,6 @@
 
 @section('content')
 
-    <div class="container">
-            <div class="content">
-                <div class="title">{{ $datenow }}</div>
-            </div>
-    </div>
-        
+  <h1>Today is <br> {{$datenow}}</h1>
+
 @stop
