@@ -1,5 +1,6 @@
 ### Snezana Jovic
 ### Laravel introduction and test
+
 This is a short introduction to Laravel with a few practical task to solve. Not all lessons in
 video course are relevant to given tasks - but is a nice way to get familiar with Laravel world.
 Depending on your PHP level, try to solve as many steps as you can. It's okay if you don't
@@ -35,3 +36,7 @@ Step 6
 - Create custom artisan command faker
 - When command is executed it should print out random name
 
+## To run assigment
+1. clone this repo
+2. composer install
+3. php artisan serve
